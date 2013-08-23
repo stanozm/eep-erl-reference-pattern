@@ -48,7 +48,7 @@ emit({State,OccurrenceTime}) ->
 				  Value >= 1000
 			  end,
 			  State),
-{OccurrenceTime,dict:fetch_keys(State)}.
+{OccurrenceTime,dict:fetch_keys(Filtered)}.
  %%{OccurrenceTime,dict:to_list(Filtered)}.
 
 

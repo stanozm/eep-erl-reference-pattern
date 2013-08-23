@@ -19,6 +19,9 @@ init() ->
   Users = sets:new(),
   {Hosts,Users}.
 
+accumulate(State, {OccurrenceTime, []}) ->
+	{State, OccurrenceTime};
+
 accumulate(State, {OccurrenceTime, List}) ->
   NewState = lists:foldl(fun add_host_and_user/2, State, List),
   {NewState, OccurrenceTime}.
