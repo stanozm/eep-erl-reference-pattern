@@ -4,7 +4,14 @@ eep-erl-reference-pattern
 Test can be executed as:
 
 ```
-distributed_attack_test:start(PathToLogFile).
+T = distributed_attack_test:start(PathToLogFile).
 ```
 
-The emitted results from both patterns will printed to standard output.
+Afterwards, all processes can be stopped by:
+
+```
+T ! stop.
+```
+
+
+The emitted results from both patterns will be printed to standard output.
